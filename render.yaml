@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: city-builder
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: MONGO_DB
+        value: city_builder
+      - key: ADMIN_IDS
+        sync: false
+      - key: DEV_MODE
+        value: false
