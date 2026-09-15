@@ -9,9 +9,9 @@ from dotenv import load_dotenv
 load_dotenv()
 BASE = os.path.dirname(os.path.abspath(__file__))
 app = Flask(__name__, static_folder='static', template_folder='templates')
-BOT_TOKEN = os.getenv('BOT_TOKEN', '')
+BOT_TOKEN = os.getenv('BOT_TOKEN', '8929285063:AAEnVYs_71Z9xiB7w1l8HR19AG-FrcJ3JAc')
 DEV_MODE = os.getenv('DEV_MODE', 'false').lower() == 'true'
-MONGO_URI = os.getenv('MONGO_URI', '')
+MONGO_URI = os.getenv('MONGO_URI', 'mongodb+srv://<db_username>:oi1cI4t8w60vAjvB@cluster0.mrgssy9.mongodb.net/?appName=Cluster0')
 DB_NAME = os.getenv('MONGO_DB', 'city_builder')
 
 if MONGO_URI:
